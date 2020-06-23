@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">LinkKit Demo</string>
+
+    <string name="devicedetail_properties">属性列表</string>
+    <string name="devicedetail_propertynamedesc">属性名:</string>
+    <string name="devicedetail_propertyvaluedesc">属性值:</string>
+    <string name="devicedetail_services">方法列表</string>
+    <string name="devicedetail_servicenamedesc">服务名:</string>
+    <string name="devicedetail_events">事件列表</string>
+    <string name="devicedetail_eventnamedesc">事件名:</string>
+    <string name="devicedetail_eventisscribe">是否订阅:</string>
+    <string name="devicedetail_editnamedesc">名称:</string>
+    <string name="devicedetail_editvaluedesc">取值:</string>
+    <string name="devicedetail_edit_hintdesc">请填写值</string>
+    <string name="devicedetail_edit_confirm">确认</string>
+    <string name="devicedetail_edit_cancel">取消</string>
+
+
+    <string name="eventlist_events">事件列表</string>
+    <string name="eventlist_eventname">事件名：</string>
+    <string name="eventlist_eventargname">事件参数名：</string>
+    <string name="eventlist_eventargvalue">事件参数值：</string>
+
+    <string name="cloudapitest_gettsl">获取tsl</string>
+    <string name="cloudapitest_getkeytoken">获取accesskeytoken</string>
+    <string name="cloudapitest_getkeyprefix">获取accesskeyprefix</string>
+    <string name="cloudapitest_createteam">创建分组</string>
+    <string name="cloudapitest_deleteteam">删除分组</string>
+    <string name="cloudapitest_addtoteam">添加到分组</string>
+    <string name="cloudapitest_deletefromteam">从分组删除</string>
+
+    <string name="shi">是</string>
+    <string name="fou">否</string>
+    <string name="back_press">后退</string>
+    <string name="setallproperty_test">设置所有属性</string>
+    <string name="sub_event_test">订阅所有事件</string>
+    <string name="press_test">压测</string>
+    <string name="null_string">NULL</string>
+
+
+    <string name="control_pannel_device_name"> 设备类型：%1$s </string>
+    <string name="control_pannel_hint"> 参照下方输入示例 </string>
+    <string name="control_pannel_data_format"> 测试输入示例：
+        \n int: 1 \n boolean:0
+        \n struct:{\"key\":\"val\"} \n array:[1,2,3]
+        \n array[struct]:[{1,2,3}, {4,5,6}]
+        \n double/float: 1.2
+        \n text: xxxxx
+    </string>
+</resources>

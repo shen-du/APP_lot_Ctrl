@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/mac"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/normalbutton_background"
+            android:gravity="center"
+            android:text=""
+            android:hint="设备mac, 例如: 11:22:aa:bb:cc"
+            android:textColor="@drawable/normalbutton_textcolor" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/normalbutton_background"
+            android:gravity="center"
+            android:onClick="prepareOta"
+            android:text="准备OTA"
+            android:textColor="@drawable/normalbutton_textcolor" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/normalbutton_background"
+        android:gravity="center"
+        android:text="开始OTA"
+        android:onClick="startOta"
+        android:textColor="@drawable/normalbutton_textcolor" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/normalbutton_background"
+        android:gravity="center"
+        android:text="停止OTA"
+        android:onClick="stopOta"
+        android:textColor="@drawable/normalbutton_textcolor" />
+
+    <include layout="@layout/item_log_scrollview" />
+</LinearLayout>

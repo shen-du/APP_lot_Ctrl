@@ -1,0 +1,16 @@
+{
+    "productKey": "a1bnHFHS76m",
+    "deviceName": "APP_4G",
+    "productSecret": "pPVGyBpctnfVBYDf",
+    "deviceSecret": "f2z56JV9ctNAzcQjr7ZJYF7sJKPEbtew",
+    "subDevice": [
+      {
+          "productKey": "a1bnHFHS76m",
+          "deviceName": "APP_4G"
+      },
+      {
+        "productKey": "a1bnHFHS76m",
+        "deviceName": "APP_4G"
+    }
+  ]
+}

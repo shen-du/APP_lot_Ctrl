@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/control_pannel_device_name"
+        android:textSize="24dp" />
+    <RelativeLayout
+        android:id="@+id/property_layout"
+        android:layout_below="@id/device_name"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <Spinner
+            android:id="@+id/property_spinner"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"/>
+        <EditText
+            android:layout_toRightOf="@id/property_spinner"
+            android:layout_toLeftOf="@+id/post_property_button"
+            android:id="@+id/value_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/control_pannel_hint"
+            android:gravity="center_vertical"
+            android:background="@null"/>
+        <Button
+            android:id="@+id/post_property_button"
+            android:layout_alignParentRight="true"
+            android:onClick="postProperty"
+            android:hint="input json string"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="属性上报"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/property_layout"
+        android:id="@+id/event_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="80dp">
+        <Spinner
+            android:id="@+id/event_spinner"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"/>
+        <EditText
+            android:layout_toRightOf="@id/event_spinner"
+            android:layout_toLeftOf="@+id/post_event_button"
+            android:id="@+id/event_value"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/control_pannel_hint"
+            android:gravity="center_vertical"
+            android:background="@null"/>
+        <Button
+            android:id="@+id/post_event_button"
+            android:layout_alignParentRight="true"
+            android:onClick="postEvent"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="事件上报"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/event_layout"
+        android:focusable="false"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:text="@string/control_pannel_data_format"/>
+</RelativeLayout>

@@ -1,0 +1,4 @@
+com/aliyun/alink/devicesdk/demo/FileProvider.class
+android/support/v4/content/FileProvider.class
+android/support/v4/content/FileProvider$PathStrategy.class
+android/support/v4/content/FileProvider$SimplePathStrategy.class

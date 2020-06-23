@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.aliyun.alink.devicesdk.demo"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 2
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        //https://developer.android.com/studio/build/multidex#multidexkeepfile-property
+        multiDexKeepFile file('multidex-config.txt')
+    }
+    signingConfigs {
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('D:\\compiler\\Android\\SDK\\.android\\debug.keystore')
+            storePassword 'android'
+        }
+
+        release {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('D:\\compiler\\Android\\SDK\\.android\\debug.keystore')
+            storePassword 'android'
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions{
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        cacheChangingModulesFor(0, 'SECONDS')
+    }
+    resolutionStrategy.force 'com.android.support:support-v4:26.1.0'
+    all*.exclude group: 'com.aliyun.iot.aep.sdk.external', module:'securityguard'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+
+    implementation ('com.aliyun.alink.linksdk:iot-linkkit:1.7.0')
+
+    implementation 'com.google.code.gson:gson:2.8.1'
+
+    implementation 'com.android.support:multidex:1.0.3'
+}

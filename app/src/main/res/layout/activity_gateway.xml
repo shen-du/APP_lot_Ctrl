@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/normalbutton_background"
+            android:gravity="center"
+            android:onClick="subDevRegister"
+            android:text="子设备注册"
+            android:textColor="@drawable/normalbutton_textcolor" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/normalbutton_background"
+            android:gravity="center"
+            android:onClick="getSubDevices"
+            android:text="获取子设备列表"
+            android:textColor="@drawable/normalbutton_textcolor" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/id_sub_dev_list"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/normalbutton_background"
+            android:gravity="center"
+            android:onClick="addSubDevice"
+            android:text="添加子设备并登录"
+            android:textColor="@drawable/normalbutton_textcolor" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/normalbutton_background"
+            android:gravity="center"
+            android:onClick="subDevOffline"
+            android:text="删除子设备并下线"
+            android:textColor="@drawable/normalbutton_textcolor" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_subdevice_thing"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/normalbutton_background"
+        android:gravity="center"
+        android:text="子设备物模型"
+        android:onClick="startSubDeviceControl"
+        android:textColor="@drawable/normalbutton_textcolor" />
+
+    <include layout="@layout/item_log_scrollview" />
+</LinearLayout>
