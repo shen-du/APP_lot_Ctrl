@@ -1,11 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
     defaultConfig {
         applicationId "com.aliyun.alink.devicesdk.demo"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 26
         versionCode 2
         versionName "1.0"
         multiDexEnabled true
@@ -19,14 +21,14 @@ android {
         debug {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
-            storeFile file('D:\\compiler\\Android\\SDK\\.android\\debug.keystore')
+            storeFile file('D:\\compiler\\Android\\.android\\debug.keystore')
             storePassword 'android'
         }
 
         release {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
-            storeFile file('D:\\compiler\\Android\\SDK\\.android\\debug.keystore')
+            storeFile file('D:\\compiler\\Android\\.android\\debug.keystore')
             storePassword 'android'
         }
     }
@@ -70,4 +72,10 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.1'
 
     implementation 'com.android.support:multidex:1.0.3'
+
+//    implementation 'androidx.appcompat:appcompat:1.1.0'
+//    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+//    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
